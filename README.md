@@ -1,22 +1,45 @@
-# Video Converter: MP4 to MOV
+# Conversor de Vídeo Pro - Miranda Tech 🎥
 
-Um script Python simples e eficiente para converter arquivos de vídeo do formato MP4 para MOV (QuickTime), utilizando a biblioteca MoviePy. Este projeto foi desenvolvido para automatizar tarefas de conversão de mídia com alta qualidade.
+Uma ferramenta de desktop moderna desenvolvida em Python para converter vídeos do formato MP4 para MOV (QuickTime). Esta versão conta com interface gráfica profissional, processamento em segundo plano e automação de nomenclatura.
 
-## ⚙️ Funcionalidades
+## 🌟 Funcionalidades
 
-- **Conversão Rápida:** Transforma arquivos `.mp4` em `.mov` mantendo a fidelidade visual.
-- **Processamento via Codec:** Utiliza `libx264` para garantir compatibilidade e eficiência.
-- **Automatizável:** Estrutura de código pronta para ser integrada em fluxos de trabalho maiores ou processamento em lote.
+- **Interface Moderna:** Botões arredondados e suporte a Dark Mode automático.
+- **Automação de Nome:** Adiciona automaticamente o prefixo `CONVERTIDO_` ao arquivo original.
+- **Seleção de Diretório:** O usuário escolhe apenas a pasta de destino; o programa cuida do nome do arquivo.
+- **Barra de Progresso:** Feedback visual em tempo real durante a conversão.
+- **Multi-threading:** A interface não trava (não fica "parada") enquanto o vídeo é processado.
 
 ## 🚀 Tecnologias Utilizadas
 
 - [Python 3.13+](https://www.python.org/)
-- [MoviePy v2.0+](https://zulko.github.io/moviepy/)
-- FFmpeg (gerenciado automaticamente pelo MoviePy)
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) (Interface Visual)
+- [MoviePy v2.0+](https://zulko.github.io/moviepy/) (Motor de Conversão)
+- [Threading](https://docs.python.org/3/library/threading.html) (Processamento Paralelo)
 
 ## 📋 Pré-requisitos
 
-Antes de rodar o script, certifique-se de que tem o Python instalado. Depois, instale a biblioteca necessária:
+Para rodar este projeto, você precisará instalar as bibliotecas abaixo via terminal:
 
 ```bash
-pip install moviepy
+pip install moviepy customtkinter
+
+🛠️ Como Usar
+Execute o arquivo converter_video.py no seu VS Code.
+
+Clique em "Selecionar Vídeo MP4" para escolher o arquivo de origem.
+
+Clique em "Escolher Pasta de Destino" para definir onde o novo arquivo será salvo.
+
+Escolha o formato de saída (atualmente .MOV).
+
+Clique em "Converter Agora" e acompanhe a barra de progresso.
+
+📂 Estrutura do Nome de Saída
+O sistema segue a seguinte lógica:
+
+Origem: video_projeto.mp4
+
+Saída: CONVERTIDO_video_projeto.mov
+
+Desenvolvido por Alex Miranda para automação de infraestrutura e gestão de ativos digitais.
